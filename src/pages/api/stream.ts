@@ -80,5 +80,9 @@ export const post: APIRoute = async context => {
     }
   })
 
-  return new Response(stream)
+  return new Response(stream, {
+    headers: {
+      "Access-Control-Allow-Origin": "*"
+    }
+  })
 }
